@@ -40,7 +40,7 @@ double ComplexNum::getIm() {
 // and operator<<
 std::ostream &operator<<(std::ostream &out, ComplexNum &complex)
 {
-  out <<  complex.mRe <<  + "i" << complex.mIm << "\n";
+  out <<  complex.mRe << complex.mIm << + "i" << "\n";
  
    return out;
 }
