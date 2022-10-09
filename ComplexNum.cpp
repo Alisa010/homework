@@ -25,19 +25,19 @@ double ComplexNum::getIm() {
 	return mIm;
 }
 
-	// ComplexNum + ComplexNum, 
-  ComplexNum operator+(const ComplexNum& other){
+// ComplexNum + ComplexNum, 
+  ComplexNum ComplexNum::operator+(const ComplexNum& other){
      return ComplexNum(other.mRe + mRe, other.mIm + mIm);
 }
-	// ComplexNum - ComplexNum, 
-  ComplexNum operator-(const ComplexNum& other){
+// ComplexNum - ComplexNum, 
+  ComplexNum ComplexNum::operator-(const ComplexNum& other){
      return ComplexNum(other.mRe - mRe, other.mIm - mIm);
 }
-  // ComplexNum * k, where k is a constant
-  ComplexNum operator*(int k){
+ // ComplexNum * k, where k is a constant
+  ComplexNum ComplexNum::operator*(int k){
      return ComplexNum(k * mRe, k * mIm);
 }
-	// and operator<<
+// and operator<<
 std::ostream &operator<<(std::ostream &out, ComplexNum &complex)
 {
   out <<  complex.mRe <<  + "i" << complex.mIm << "\n";
