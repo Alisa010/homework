@@ -10,21 +10,21 @@ int main(){
   ComplexNum c3{3 , 9};
   ComplexNum c4{8 , 9};
 
-  std::vector<double> vec;
-  vec.push_back(c1.getModues());
-  vec.push_back(c2.getModues());
-  vec.push_back(c3.getModues());
-  vec.push_back(c4.getModues());
+  std::vector<ComplexNum> vec;
+  vec.push_back(c1);
+  vec.push_back(c2);
+  vec.push_back(c3);
+  vec.push_back(c4);
 
 	for(int i = 0; i < vec.size(); ++i){
 		for(int j = 0; j < vec.size() - 1 - i; ++j){
-			  if(vec[j] > vec[j + 1]){
+			  if(vec[j].getModulus() > vec[j + 1].getModulus()){
       			       std::swap(vec[j] , vec[j + 1]);
 			   }
                  }
          }
   for(int i = 0; i < vec.size() ; ++i){
-          std::cout << vec[i] ;
+          std::cout << vec[i] << " " ;
      }
 
 }
