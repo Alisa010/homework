@@ -17,18 +17,17 @@ public:
 
 	double getIm();
 
-	
-	// ComplexNum + ComplexNum, 
+  // ComplexNum + ComplexNum, 
   ComplexNum operator+(const ComplexNum& other);
-	// ComplexNum - ComplexNum, 
+  // ComplexNum - ComplexNum, 
   ComplexNum operator-(const ComplexNum& other);
   // ComplexNum * k, where k is a constant
   ComplexNum operator*(int k);
-	// and operator<<
+  // and operator<<
   friend std::ostream &operator<<(std::ostream& , ComplexNum&);
 
 
-	// 
+  // 
 	
 };
 
